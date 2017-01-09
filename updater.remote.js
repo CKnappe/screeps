@@ -16,7 +16,7 @@ module.exports = {
           }
           var remoteFlagInfo = room.memory.RegisteredRemoteFlags[ remoteName ];
           console.log(JSON.stringify( remoteFlagInfo ));
-          remoteFlagInfo.test = true;
+          remoteFlagInfo.test = undefined;
         } else {
           break;
         }
