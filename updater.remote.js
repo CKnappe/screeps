@@ -11,10 +11,10 @@ module.exports = {
         var remoteName = "remote." + room.name + "." + counter;
         var remoteFlag = Game.flags[remoteName];
         if( remoteFlag ) {
-          remoteFlagInfo = room.memory.RegisteredRemoteFlags[ remoteName ];
-          if( !remoteFlagInfo ) {
-            remoteFlagInfo = {};
+          if( !room.memory.RegisteredRemoteFlags[ remoteName ] ) {
+            room.memory.RegisteredRemoteFlags[ remoteName ] = {};
           } else {
+            var remoteFlagInfo = room.memory.RegisteredRemoteFlags[ remoteName ];
             console.log(JSON.stringify( remoteFlagInfo ));
           }
         } else {
