@@ -3,7 +3,7 @@
  **/
 module.exports = {
     run: function(room) {
-      if( room.memory.RegisteredRemoteFlags ) {
+      if( !room.memory.RegisteredRemoteFlags ) {
         room.memory.RegisteredRemoteFlags = {};
       }
       var counter = 1;
