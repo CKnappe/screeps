@@ -13,10 +13,10 @@ module.exports = {
         if( remoteFlag ) {
           if( !room.memory.RegisteredRemoteFlags[ remoteName ] ) {
             room.memory.RegisteredRemoteFlags[ remoteName ] = {};
-          } else {
-            var remoteFlagInfo = room.memory.RegisteredRemoteFlags[ remoteName ];
-            console.log(JSON.stringify( remoteFlagInfo ));
           }
+          var remoteFlagInfo = room.memory.RegisteredRemoteFlags[ remoteName ];
+          console.log(JSON.stringify( remoteFlagInfo ));
+          remoteFlagInfo.test = true;
         } else {
           break;
         }
