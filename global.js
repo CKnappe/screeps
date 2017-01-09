@@ -8,7 +8,7 @@ module.exports = {
         }
     },
     TickRoom: function(room) {
-      updaterRemote( room );
+      updaterRemote.run( room );
         spawner.spawn( room );
     }
 
