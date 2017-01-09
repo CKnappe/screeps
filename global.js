@@ -1,4 +1,5 @@
 var spawner = require('spawner');
+var updaterRemote = require('updater.remote');
 
 module.exports = {
     Tick: function() {
@@ -7,6 +8,7 @@ module.exports = {
         }
     },
     TickRoom: function(room) {
+      updaterRemote( room );
         spawner.spawn( room );
     }
 
