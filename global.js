@@ -1,8 +1,3 @@
-var registerSources = require('register.Sources');
-var updaterMiners = require('updater.Miners');
-var updaterHarvesters = require('updater.Harvesters');
-var updaterSources = require('updater.Sources');
-var updaterRunners = require('updater.Runners');
 var spawner = require('spawner');
 
 module.exports = {
@@ -12,9 +7,6 @@ module.exports = {
         }
     },
     TickRoom: function(room) {
-        //updaterSources.tick( room );
-        //updaterMiners.tick( room );
-        //updaterHarvesters.tick( room );
         spawner.spawn( room );
     }
 
